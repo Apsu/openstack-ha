@@ -80,7 +80,7 @@ node["ha"]["available_services"].each do |s, v|
         virtual_router_id router_id  # Needs to be a integer between 1..255
         virtual_ipaddress Array(listen_ip)
         track_script "haproxy"
-        notify_master "/etc/keepalived/notify.sh add #{vrrp_interface} #{listen_ip} #{src_ip}"
+        notify_master "/etc/keepalived/notify.sh haproxy #{vrrp_interface} #{listen_ip} #{src_ip}"
         notify_backup "/etc/keepalived/notify.sh del #{vrrp_interface} #{listen_ip} #{src_ip}"
         notify_fault "/etc/keepalived/notify.sh del #{vrrp_interface} #{listen_ip} #{src_ip}"
         notify_stop "/etc/keepalived/notify.sh del #{vrrp_interface} #{listen_ip} #{src_ip}"
