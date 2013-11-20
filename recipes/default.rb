@@ -65,7 +65,7 @@ node["ha"]["available_services"].each do |s, v|
       Chef::Log.info("Configuring vrrp for #{ns}-#{svc}")
       vrrp_name = "vi_#{listen_ip.gsub(/\./, '_')}"
       vrrp_interface = get_if_for_net(vip_network, node)
-      src_ip = get_ip_for_net(vip_network, node)
+      src_ip = node["apipa"]
       router_id = vrid
 
       keepalived_chkscript "haproxy" do
