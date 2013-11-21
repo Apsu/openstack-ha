@@ -121,7 +121,7 @@ node["ha"]["available_services"].each do |s, v|
         lb_algo lb_algo
         mode lb_mode
         options lb_opts
-        vs_listen_ip listen_ip
+        vs_listen_ip src_ip
         vs_listen_port listen_port.to_s
         real_servers rs_list
         active_backup active_backup
