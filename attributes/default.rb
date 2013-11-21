@@ -9,7 +9,7 @@
 # default["vips"]["config"]["127.0.0.4"]["vrid"]=12
 
 # APIPA binding for haproxy; keepalived will manage this IP
-default["apipa"] = 169.254.123.1
+default["apipa"] = "169.254.123.1"
 
 default["vips"]["mysql-db"] = nil
 default["vips"]["rabbitmq-queue"] = nil
